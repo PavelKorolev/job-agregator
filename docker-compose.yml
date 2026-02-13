@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  api:
+    build: .
+    container_name: petproject_api
+    ports:
+      - "8001:8000"
+    environment:
+      MODEL_URL: "http://host.docker.internal:11434/v1/chat/completions"
